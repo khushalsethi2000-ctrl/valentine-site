@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>💖 Valentine Proposal 💖</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+}
+
+.card {
+    background: rgba(255,255,255,0.15);
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.photo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 15px;
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#yes {
+    background: #28a745;
+    color: white;
+}
+
+#no {
+    background: #dc3545;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+    <source src="love.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card">
+    <div class="photo">
+        <img src="photo.jpg" alt="Photo">
+    </div>
+
+    <h1>Will you be my Valentine? 💘</h1>
+    <p>You make every ordinary day feel special ✨</p>
+
+    <button onclick="playMusic()">▶️ Play Music</button><br>
+    <button id="yes" onclick="yesClicked()">Yes 💕</button>
+</div>
+
+<script>
+function playMusic() {
+    document.getElementById("music").play();
+}
+
+function yesClicked() {
+    document.body.innerHTML = `
+        <h1 style="text-align:center;">Yayyy! 💖🥰<br>Happy Valentine’s Day 🌹</h1>
+    `;
+}
+</script>
+
+</body>
+</html>
